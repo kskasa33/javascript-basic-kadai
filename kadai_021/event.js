@@ -1,11 +1,12 @@
-//同期処理を実行する
+// 同期処理：ボタンとテキスト要素を取得
 const btn = document.getElementById('btn');
 const text = document.getElementById('text');
 
-// 2秒（2000ミリ秒）の待ち時間を設定し、非同期処理を実行する
-setTimeout(() => {
-  btn.addEventListener('click', () => {
+// ボタンをクリックしたときのイベントを設定
+btn.addEventListener('click', () => {
+  // 非同期処理：2秒後にテキストを変更
+  setTimeout(() => {
     text.textContent = 'ボタンをクリックしました';
-  });
-  console.log('イベントを登録しました');
-}, 2000);
+    console.log('2秒後に文字を変更しました');
+  }, 2000);
+});
